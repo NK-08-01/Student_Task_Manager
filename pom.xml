@@ -62,11 +62,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 In-Memory Database (test scope): Allows unit & integration tests to run without external MySQL -->
+        <!-- H2 Database: Enables immediate local operation without requiring MySQL root password -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
