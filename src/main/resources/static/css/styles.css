@@ -1,0 +1,246 @@
+/* ==============================================================================
+   Student Task Manager - Modern Academic Dashboard Stylesheet
+   ============================================================================== */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+    --accent-color: #f59e0b;
+    --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --bg-page: #f8fafc;
+    --card-border-radius: 14px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-page);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.bg-primary-gradient {
+    background: var(--primary-gradient);
+}
+
+.brand-icon {
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.btn-accent {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* STAT CARDS */
+.stat-card {
+    border-radius: var(--card-border-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stat-card.card-total {
+    border-left: 4px solid #3b82f6 !important;
+}
+
+.stat-card.card-inprogress {
+    border-left: 4px solid #06b6d4 !important;
+}
+
+.stat-card.card-pending {
+    border-left: 4px solid #f59e0b !important;
+}
+
+.stat-card.card-completed {
+    border-left: 4px solid #10b981 !important;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+}
+
+.stat-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* TASK CARDS */
+.task-item-card {
+    border-radius: var(--card-border-radius);
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.task-item-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+}
+
+.task-item-card.completed-card {
+    background-color: #fcfdfd;
+    opacity: 0.9;
+}
+
+.task-item-card.completed-card .task-title {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-subject-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+    color: #475569;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+/* PRIORITY BADGES */
+.badge-priority-HIGH {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    font-weight: 600;
+}
+
+.badge-priority-MEDIUM {
+    background-color: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+    font-weight: 600;
+}
+
+.badge-priority-LOW {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    font-weight: 600;
+}
+
+/* STATUS BADGES */
+.badge-status-PENDING {
+    background-color: #fffbeb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.badge-status-IN_PROGRESS {
+    background-color: #ecfeff;
+    color: #0e7490;
+    border: 1px solid #a5f3fc;
+}
+
+.badge-status-COMPLETED {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* DEADLINE INDICATORS */
+.deadline-text {
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.deadline-overdue {
+    color: #dc2626 !important;
+    font-weight: 600;
+}
+
+.deadline-soon {
+    color: #d97706 !important;
+    font-weight: 600;
+}
+
+.deadline-normal {
+    color: #64748b;
+}
+
+/* QUICK STATUS SELECT */
+.status-select-sm {
+    font-size: 0.75rem;
+    padding: 0.2rem 1.6rem 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* CARD ACTION BUTTONS */
+.btn-action-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* EMPTY STATE */
+.empty-icon {
+    color: #94a3b8;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+    .stat-value {
+        font-size: 1.4rem;
+    }
+    .stat-icon-wrapper {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
